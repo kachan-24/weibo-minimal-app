@@ -11,3 +11,5 @@ Desktop.ini
 *.log
 .playwright-cli/
 node_modules/
+dist/
+coverage/

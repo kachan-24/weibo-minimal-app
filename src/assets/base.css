@@ -1,0 +1,59 @@
+/* ===== 设计变量 ===== */
+:root {
+  --color-primary: #1d9bf0;
+  --color-primary-dark: #0c7abf;
+  --color-bg: #f0f4f8;
+  --color-card: #ffffff;
+  --color-text: #1a2733;
+  --color-text-secondary: #6b7a8c;
+  --color-border: #c9d4de;
+  --color-danger: #e8556d;
+
+  --radius-card: 16px;
+  --shadow-card: 0 2px 10px rgba(26, 39, 51, 0.06);
+  --shadow-card-hover: 0 6px 18px rgba(26, 39, 51, 0.1);
+
+  --font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  --transition-fast: 0.2s ease;
+}
+
+/* ===== 基础样式 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  background-image: linear-gradient(180deg, #e7f1fa 0%, var(--color-bg) 320px);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== 卡片通用 ===== */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ===== 微动画 ===== */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
